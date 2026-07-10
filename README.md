@@ -1,137 +1,91 @@
-# AnywhereDr – AI-Powered Healthcare Assistant *(Under Development)*
+# 🏥 AnywhereDr — AI-Powered Medical Consultation
 
-> **🚧 Project Status:** This project is currently under active development. New features, AI capabilities, and interface improvements are being added regularly.
-
-## About the Project
-
-AnywhereDr is an AI-powered healthcare assistant designed to provide preliminary medical guidance based on user-reported symptoms. The goal of this project is to create an intelligent virtual healthcare platform that can assist users with symptom analysis, health recommendations, and basic medical consultation before seeking professional healthcare.
-
-This project combines Artificial Intelligence, Large Language Models (LLMs), and modern software development practices to deliver an interactive and user-friendly healthcare experience.
+A beautiful, professional desktop medical consultation app built with Python + Tkinter + OpenAI.
 
 ---
 
-## Planned Features
+## ✨ Features
 
-- Patient Registration System
-- AI-Powered Symptom Assessment
-- Intelligent Disease Prediction
-- Medical History Collection
-- Risk Level Analysis
-- Personalized Health Recommendations
-- Downloadable Consultation Reports
-- Secure Patient Data Handling
-- Voice-Based Consultation *(Planned)*
-- Multi-Language Support *(Planned)*
-
----
-
-## Tech Stack
-
-- Python
-- OpenAI API / Large Language Models
-- Tkinter / CustomTkinter
-- SQLite
-- JSON
-- dotenv
-- Git & GitHub
+| Feature | Details |
+|---|---|
+| 🧑 Patient Registration | Name, Age, Gender form with validation |
+| 🫁 Body Part Selection | 10 body systems, clickable card grid |
+| ✅ Symptom Checker | 80+ symptoms, two-column checkboxes |
+| 📋 Medical History | 6 follow-up questions (duration, severity, meds, etc.) |
+| 🤖 AI Diagnosis | OpenAI GPT-4o-mini with animated analysis screen |
+| 📊 Diagnosis Report | Risk meter, conditions, home care, warnings |
+| 📄 Report Download | Full printable text report |
+| 🔄 Restart | New consultation without relaunching |
 
 ---
 
-## Project Structure
+## 🚀 Quick Start
+
+### 1. Install Python
+Make sure Python 3.9+ is installed: https://python.org
+
+### 2. Install Dependencies
+```bash
+cd AnywhereDr
+pip install -r requirements.txt
+```
+
+### 3. Configure API Key (Optional — Demo works without it)
+Open `.env` and add your key:
+```
+OPENAI_API_KEY=sk-your-actual-key-here
+```
+> 💡 **No key?** No problem — the app runs in **Demo Mode** automatically with realistic sample results.
+
+### 4. Run the App
+```bash
+python main.py
+```
+
+---
+
+## 📁 Project Structure
 
 ```
 AnywhereDr/
-│── main.py
-│── ai_engine.py
-│── symptom_checker.py
-│── report_generator.py
-│── database.py
-│── config.py
-│── requirements.txt
-│── assets/
-│── reports/
-└── README.md
+├── main.py              # Main app, all screens & UI
+├── config.py            # Colors, fonts, symptom data, settings
+├── ai_engine.py         # OpenAI API integration
+├── report_generator.py  # PDF/TXT report creation
+├── requirements.txt     # Dependencies
+├── .env                 # Your API key (keep private!)
+└── reports/             # Auto-generated consultation reports
 ```
 
-## Project Images
+---
 
-### Initial Page:
-<img width="1118" height="906" alt="image" src="https://github.com/user-attachments/assets/c1ce042d-3b56-4af0-8f71-76f5039a29d0" />
-<img width="1110" height="876" alt="image" src="https://github.com/user-attachments/assets/20af7e9b-1450-4da7-bb95-9a1825754f31" />
+## 🎨 Design
 
-### Patient Registration Page:
-<img width="1092" height="857" alt="image" src="https://github.com/user-attachments/assets/d1bfb85f-5be7-4aca-858b-87074e6df4a2" />
-
-### Affected Body Area Selection Page:
-<img width="1113" height="861" alt="image" src="https://github.com/user-attachments/assets/e8919e57-b4cf-4356-a373-742ed32fe00c" />
-
-### Symptoms Selection Page:
-<img width="1102" height="868" alt="image" src="https://github.com/user-attachments/assets/a6498c50-2d95-44e5-a08f-a22c8a19e588" />
-
-### Medical History Page:
-<img width="1092" height="862" alt="image" src="https://github.com/user-attachments/assets/b599ec9c-d072-4fb6-acbe-851b7509a0ae" />
-
-### Report Generation Page:
-<img width="1103" height="866" alt="image" src="https://github.com/user-attachments/assets/3138c71c-e9ed-46fd-91ea-ef90e8122594" />
-
-### Report Download Feature:
-<img width="1107" height="857" alt="image" src="https://github.com/user-attachments/assets/6ae242be-0c1b-4e7c-83f8-c361c66b3b1c" />
-
+- **Theme:** Dark medical UI (`#0a0f1a` background)
+- **Accent:** Teal (`#00d4aa`)
+- **Font:** Segoe UI
+- **Screens:** 7 screens with smooth navigation
+- **Risk Meter:** Color-coded Low / Moderate / High / Critical
 
 ---
 
-## Development Progress
+## ⚠️ Medical Disclaimer
 
-| Module | Status |
-|---------|--------|
-| Project Planning | ✅ Completed |
-| UI Design | ✅ Completed |
-| Core Architecture | ✅ Completed |
-| Patient Registration | ✅ Completed |
-| Symptom Collection | 🔄 In Progress |
-| AI Diagnosis Engine | 🔄 In Progress |
-| Report Generation | 🔄 In Progress |
-| Database Integration | ⏳ Planned |
-| Voice Assistant | ⏳ Planned |
-| Cloud Deployment | ⏳ Planned |
+This application is for **informational and demonstration purposes only**.
+It is **NOT** a substitute for professional medical advice, diagnosis, or treatment.
+Always consult a qualified healthcare provider for medical concerns.
+In emergencies, call your local emergency services.
 
 ---
 
-## Future Roadmap
+## 📋 Demo Mode
 
-- AI-powered medical consultation
-- Advanced symptom checker
-- Voice interaction support
-- Hospital recommendation system
-- Appointment booking integration
-- Medical report generation
-- Electronic Health Record (EHR) support
-- Mobile application
-- Cloud deployment
-- Wearable device integration
+Without an API key, the app generates realistic demo results including:
+- Common Cold / Flu / COVID-19 conditions
+- Risk level based on your severity answer  
+- Full home care, warning signs, and lifestyle advice
+- Downloadable report
 
 ---
 
-## Disclaimer
-
-This project is intended for educational, research, and demonstration purposes only. It does **not** replace professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional regarding any medical condition.
-
----
-
-## Contributing
-
-Contributions, suggestions, and feature requests are always welcome.
-
-1. Fork the repository
-2. Create a new feature branch
-3. Commit your changes
-4. Push to your branch
-5. Open a Pull Request
-
----
-
-## Support
-
-If you like this project, consider giving it a **⭐ Star** on GitHub to support its development.
-
----
+*Built with Python + Tkinter + OpenAI  |  AnywhereDr v1.0.0*
